@@ -84,7 +84,7 @@ export class DataService {
 ## :clipboard: Status & To-Do List
 
 * Status: Working.
-* To-Do: Nothing
+* To-Do: 
 
 ## :clap: Inspiration
 
@@ -94,4 +94,4 @@ export class DataService {
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/clemo97), email: `lumumbaclement@gmail.com`
+* Repo created by [Clement Lumumba](https://github.com/clemo97), email: `lumumbaclement@gmail.com`
