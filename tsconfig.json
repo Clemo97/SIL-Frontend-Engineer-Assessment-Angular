@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "importHelpers": true,
+    "outDir": "./docs/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "target": "ES2022",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "paths": {
+      "core-js/es7/reflect": [
+        "node_modules/core-js/proposals/reflect-metadata"
+      ],
+      "core-js/es6/*": [
+        "node_modules/core-js/es/*"
+      ]
+    },
+    "useDefineForClassFields": false
+  }
+}
