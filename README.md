@@ -15,7 +15,6 @@
   - [:computer: Code Examples](#computer-code-examples)
   - [:cool: Features](#cool-features)
   - [:clipboard: Status \& To-Do List](#clipboard-status--to-do-list)
-  - [:clap: Inspiration](#clap-inspiration)
   - [:file\_folder: License](#file_folder-license)
   - [:envelope: Contact](#envelope-contact)
 
@@ -86,11 +85,11 @@ export class DataService {
 * Status: Working.
 * To-Do: 
 
-## :clap: Inspiration
+
 
 ## :file_folder: License
 
-* N/A
+* Open Software License 3.0
 
 ## :envelope: Contact
 

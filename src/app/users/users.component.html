@@ -3,10 +3,10 @@
 <ul [@listStagger]="users$">
   <li *ngFor="let user of users$">
     <a
-      routerLink="/details/{{ user.id }}"
+      routerLink="/albums/{{ user.id }}"
       routerLinkActive="activated"
       [routerLinkActiveOptions]="{ exact: true }"
-      >{{ user.name }}</a
+      >{{ user.title }}</a
     >
     <ul>
       <li>{{ user.email }}</li>

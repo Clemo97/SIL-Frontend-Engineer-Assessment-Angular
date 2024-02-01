@@ -1,0 +1,23 @@
+<h1><u>User Details</u></h1>
+<app-details></app-details>
+
+<h1><u>User Albums</u></h1>
+
+<ul [@listStagger]="userAlbum$">
+  <li *ngFor="let user of userAlbum$">
+      <a
+      routerLink="/albumsPhotos/{{ user.id }}"
+      routerLinkActive="activated"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >{{ user.title }}</a
+    >
+    <ul>
+      <li><strong>Album Title:</strong> {{ user.title }} </li>
+      <li><strong>Album Id:</strong> {{ user.id }} </li>
+      <li><strong>Posted by User:</strong> {{ user.userId }} </li>
+      <li>
+        <a href="http://{{ user.website }}">{{ user.website }}</a>
+      </li>
+    </ul>
+  </li>
+</ul>

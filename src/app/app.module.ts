@@ -10,6 +10,7 @@ import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserAlbumsComponent } from './user-albums/user-albums.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SidebarComponent,
     PostsComponent,
     UsersComponent,
-    DetailsComponent
+    DetailsComponent,
+    UserAlbumsComponent
   ],
   imports: [
     BrowserModule,

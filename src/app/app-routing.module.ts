@@ -3,19 +3,24 @@ import { Routes, RouterModule } from "@angular/router";
 import { UsersComponent } from "./users/users.component";
 import { DetailsComponent } from "./details/details.component";
 import { PostsComponent } from "./posts/posts.component";
+import { UserAlbumsComponent } from "./user-albums/user-albums.component";
 
 const routes: Routes = [
   {
     path: "",
     component: UsersComponent,
   },
+  // {
+  //   path: "details/:id",
+  //   component: DetailsComponent,
+  // },
   {
-    path: "details/:id",
-    component: DetailsComponent,
+    path: "albums",
+    component: PostsComponent,
   },
   {
-    path: "posts",
-    component: PostsComponent,
+    path: "albums/:id",
+    component: UserAlbumsComponent,
   },
 ];
 
