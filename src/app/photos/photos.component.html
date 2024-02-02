@@ -1,0 +1,10 @@
+<h1>Photos</h1>
+
+<ul>
+  <li *ngFor="let photo of userAlbum$">
+    <p><strong>Album Title: </strong> {{ photo.title }} </p>
+    <p><strong>Album Id:  </strong> {{ photo.albumId }} </p>
+    <p><strong>Album URL:  </strong> {{ photo.URL }} </p>
+    <p><strong>ID:  </strong> {{ photo.id }} </p>
+  </li>
+</ul>

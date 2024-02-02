@@ -6,10 +6,10 @@
       routerLink="/albums/{{ user.id }}"
       routerLinkActive="activated"
       [routerLinkActiveOptions]="{ exact: true }"
-      >{{ user.title }}</a
+      >{{ user.name }}</a
     >
     <ul>
-      <li>{{ user.email }}</li>
+      <li>User Id: {{ user.id }}</li>
       <li>
         <a href="http://{{ user.website }}">{{ user.website }}</a>
       </li>

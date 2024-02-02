@@ -6,7 +6,7 @@
 <ul [@listStagger]="userAlbum$">
   <li *ngFor="let user of userAlbum$">
       <a
-      routerLink="/albumsPhotos/{{ user.id }}"
+      routerLink="/photos/{{ user.id }}"
       routerLinkActive="activated"
       [routerLinkActiveOptions]="{ exact: true }"
       >{{ user.title }}</a
