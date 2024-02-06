@@ -1,5 +1,5 @@
 # :zap: Angular API User Albums
-
+The app is deployed on (https://sil-hosting.web.app/)
 * App to get user details and albums from an external [JSONPlaceholder](https://jsonplaceholder.typicode.com) API.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
