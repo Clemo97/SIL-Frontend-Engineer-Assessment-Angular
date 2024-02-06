@@ -35,4 +35,13 @@ export class DataService {
     return this.http.get("https://jsonplaceholder.typicode.com/photos/" + id
     );
   }
+
+  updatePhotoTitle(photoId: string, title: string) {
+    console.log("Photo Id: ",photoId)
+    console.log("Title: ",title)
+    
+    const data = { title: title };
+
+    return this.http.patch("https://jsonplaceholder.typicode.com/photos/" + photoId, data);
+  }
 }

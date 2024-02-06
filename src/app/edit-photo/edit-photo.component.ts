@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../data.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-photo',
@@ -9,25 +10,50 @@ import { DataService } from '../data.service';
 })
 export class EditPhotoComponent implements OnInit {
   photoId: any;
-  photoData: any; // Define the type of photoData based on the response data structure
+  photoData: any;
+  photoForm: FormGroup; // Define the form group
 
-  constructor(private route: ActivatedRoute, private dataService: DataService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private dataService: DataService,
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
-    // Get the photoId from the route parameter
     this.route.params.subscribe(params => {
-      this.photoId = +params['id']; // Convert the id parameter to a number
+      this.photoId = +params['id'];
     });
 
-    // Call the DataService to get the individual photo data
     this.dataService.getIndividualPhoto(this.photoId).subscribe(
       (data: any) => {
         this.photoData = data;
-        console.log(this.photoData); // Log the photo data for testing
+        this.createForm(); // Call createForm after fetching photoData
       },
       (error) => {
         console.error('Error fetching individual photo:', error);
       }
     );
+  }
+
+  // Method to create the form group
+  createForm() {
+    this.photoForm = this.fb.group({
+      title: [this.photoData.title, Validators.required] // Prefill title and mark as required
+    });
+  }
+
+  // Method to update the photo title
+  updatePhoto() {
+    if (this.photoForm.valid) {
+      const updatedTitle = this.photoForm.value.title;
+      this.dataService.updatePhotoTitle(this.photoId, updatedTitle).subscribe(
+        (response: any) => {
+          console.log('Photo title updated successfully:', response);
+        },
+        (error) => {
+          console.error('Error updating photo title:', error);
+        }
+      );
+    }
   }
 }
