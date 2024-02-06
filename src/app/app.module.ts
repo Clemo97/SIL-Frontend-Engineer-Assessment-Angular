@@ -12,6 +12,7 @@ import { DetailsComponent } from './details/details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserAlbumsComponent } from './user-albums/user-albums.component';
 import { PhotosComponent } from './photos/photos.component';
+import { EditPhotoComponent } from './edit-photo/edit-photo.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PhotosComponent } from './photos/photos.component';
     UsersComponent,
     DetailsComponent,
     UserAlbumsComponent,
-    PhotosComponent
+    PhotosComponent,
+    EditPhotoComponent
   ],
   imports: [
     BrowserModule,

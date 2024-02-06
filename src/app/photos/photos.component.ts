@@ -34,9 +34,13 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 export class PhotosComponent implements OnInit {
 
   userAlbum$: any;
+  albumTitle: string;
 
   constructor(private data: DataService, private route: ActivatedRoute) {
-    this.route.params.subscribe(params => this.userAlbum$ = params.id)
+    this.route.params.subscribe(params => {
+      this.userAlbum$ = params.id;
+      this.albumTitle = params.title; // Set the album title
+    });
   }
 
   ngOnInit() {
@@ -46,4 +50,3 @@ export class PhotosComponent implements OnInit {
   }
 
 }
-

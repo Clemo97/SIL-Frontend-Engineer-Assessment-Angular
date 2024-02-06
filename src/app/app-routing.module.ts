@@ -5,6 +5,7 @@ import { DetailsComponent } from "./details/details.component";
 import { PostsComponent } from "./posts/posts.component";
 import { UserAlbumsComponent } from "./user-albums/user-albums.component";
 import { PhotosComponent } from "./photos/photos.component";
+import { EditPhotoComponent } from "./edit-photo/edit-photo.component";
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "photos/:id",
     component: PhotosComponent,
+  },
+  {
+    path: "edit-photo/:id",
+    component: EditPhotoComponent,
   },
 ];
 

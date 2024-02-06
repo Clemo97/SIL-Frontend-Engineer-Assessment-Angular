@@ -1,10 +1,22 @@
-<h1>Photos</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Album Title: {{ albumTitle }}</h1>
+    </div>
+  </div>
+</div>
 
-<ul>
-  <li *ngFor="let photo of userAlbum$">
-    <p><strong>Album Title: </strong> {{ photo.title }} </p>
-    <p><strong>Album Id:  </strong> {{ photo.albumId }} </p>
-    <p><strong>Album URL:  </strong> {{ photo.url }} </p>
-    <p><strong>ID:  </strong> {{ photo.id }} </p>
-  </li>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let photo of userAlbum$">
+      <div class="card mb-4">
+        <img src="{{ photo.url }}" class="card-img-top" alt="Photo">
+        <div class="card-body">
+          <h5 class="card-title">{{ photo.title }}</h5>
+          <p class="card-text">{{ photo.albumId }}</p>
+          <a href="#" class="btn btn-primary" [routerLink]="['/edit-photo', photo.id]">View Image</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -30,4 +30,9 @@ export class DataService {
     return this.http.get("https://jsonplaceholder.typicode.com/photos?albumId=" + albumId
     );
   }
+
+  getIndividualPhoto(id: string) {
+    return this.http.get("https://jsonplaceholder.typicode.com/photos/" + id
+    );
+  }
 }
