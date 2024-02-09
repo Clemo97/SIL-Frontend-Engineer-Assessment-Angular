@@ -1,0 +1,39 @@
+name: Angular Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular app
+        run: npm run build -- --prod
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      - name: Deploy to hosting platform
+        # Add your deployment script or command here
+        run: |
+          # Example: Deploy to Firebase Hosting
+          npm install -g firebase-tools
+          firebase login --no-interactive
+          firebase deploy --only hosting
