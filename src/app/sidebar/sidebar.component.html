@@ -1,16 +1,19 @@
 <nav>
   <ul>
     <li>
-      <!-- <a routerLink="" [class.activated]="currentUrl == '/'"> -->
-      <a routerLink="" routerLinkActive="activated">
+      <a routerLink="home" routerLinkActive="activated">
         <i class="material-icons">supervised_user_circle</i>
       </a>
     </li>
     <li>
-      <!-- <a routerLink="posts" [class.activated]="currentUrl == '/posts'"> -->
       <a routerLink="albums" routerLinkActive="activated">
         <i class="material-icons">album</i>
       </a>
+    </li>
+    <li *ngIf="authService.isLoggedIn">
+      <button mat-button color="warn" (click)="authService.SignOut()">
+        <i class="fas fa-sign-out-alt"></i> Log out
+      </button>
     </li>
   </ul>
 </nav>

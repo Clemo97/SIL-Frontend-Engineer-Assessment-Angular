@@ -1,0 +1,39 @@
+<mat-card class="authBlock" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card-header>
+    <mat-card-title>Sign In</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form #signInForm="ngForm" (ngSubmit)="authService.SignIn(userEmail.value, userPassword.value)" fxLayout="column" fxLayoutAlign="center stretch">
+      <mat-form-field>
+        <input matInput
+              placeholder="Email"
+              #userEmail="ngModel"
+              name="userEmail"
+              required
+              email
+              [(ngModel)]="userEmailValue">
+        <mat-error *ngIf="userEmail.invalid && (userEmail.dirty || userEmail.touched)">
+          <span *ngIf="userEmail.errors?.required">Email is required.</span>
+          <span *ngIf="userEmail.errors?.email">Invalid email address.</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput
+              type="password"
+              placeholder="Password"
+              #userPassword="ngModel"
+              name="userPassword"
+              required
+              minlength="6"
+              [(ngModel)]="userPasswordValue">
+        <mat-error *ngIf="userPassword.invalid && (userPassword.dirty || userPassword.touched)">
+          <span *ngIf="userPassword.errors?.required">Password is required.</span>
+          <span *ngIf="userPassword.errors?.minlength">Password must be at least 6 characters long.</span>
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="signInForm.invalid">Log in</button>
+    </form>
+  </mat-card-content>
+</mat-card>
