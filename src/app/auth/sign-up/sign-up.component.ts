@@ -6,6 +6,10 @@ import { AuthService } from "../../shared/services/auth.service";
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
+
+  email: string = '';
+  password: string = '';
+
   constructor(
     public authService: AuthService
   ) { }

@@ -1,0 +1,48 @@
+.authBlock {
+  width: 400px; /* Adjust width as needed */
+  padding: 20px;
+}
+
+mat-card-header, mat-card-content {
+  text-align: center;
+}
+
+.formGroup {
+  text-align: center;
+}
+
+.or {
+  display: inline-block;
+  margin: 10px 0;
+  color: #888;
+}
+
+.orInner {
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+
+.redirect {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.redirect:hover {
+  text-decoration: underline;
+}
+
+/* Adjust styling for the 'Forgot Password?' button */
+.forgotPassword button {
+  margin-top: 10px; /* Add some spacing */
+}
+
+/* Adjust styling for the 'Sign Up' button */
+.redirectToLogin button {
+  margin-top: 10px; /* Add some spacing */
+}
+.sign-in-title {
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold;
+}
+
